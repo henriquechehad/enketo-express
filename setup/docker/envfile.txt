@@ -1,5 +1,5 @@
 # Necessary variable.
-ENKETO_API_KEY=
+ENKETO_API_KEY=defaultkey-changeit
 
 # Optional variables (and their default values).
 #ENKETO_OFFLINE_SURVEYS=True
