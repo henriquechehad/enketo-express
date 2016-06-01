@@ -11,7 +11,7 @@ redis_cache:
     - ./setup/redis/conf/redis-enketo-cache.conf:/etc/redis/redis.conf
 
 enketo_express:
-  build: .
+  image: kobotoolbox/enketo_express
   ports:
     - "8005:8005"
   links:
@@ -19,6 +19,5 @@ enketo_express:
     - redis_cache
   env_file:
     - ./setup/docker/envfile.txt
-# DEBUG: For mapping this host directory into the container.
-  # volumes:
-  #   - .:/srv/enketo-express  # Make sure to clear out your `node_modules`!
+  volumes:
+    - .:/srv/enketo-express  # Make sure to clear out your `node_modules`!
